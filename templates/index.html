@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ESHOP PRICE CLASSIFIER</title>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>ESHOP PRICE CLASSIFIER</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <label for="">Year</label>
+        <input type="text" name="a" id="">
+        <br>
+        <label for="">Month</label>
+        <input type="text" name="b" id="">
+        <br>
+        <label for="">Day</label>
+        <input type="text" name="c" id="">
+        <br>
+        <label for="">Order</label>
+        <input type="text" name="d" id="">
+        <br>
+        <label for="">Country</label>
+        <input type="text" name="e" id="">
+        <br>
+        <label for="">Session ID</label>
+        <input type="text" name="f" id="">
+        <br>
+        <label for="">page1</label>
+        <input type="text" name="g" id="">
+        <br>
+        <label for="">Color</label>
+        <input type="text" name="h" id="">
+        <br>
+        <label for="">Location</label>
+        <input type="text" name="i" id="">
+        <br>
+        <label for="">Model Photography</label>
+        <input type="text" name="j" id="">
+        <br>
+        <label for="">Price</label>
+        <input type="text" name="k" id="">
+        <br>
+        <label for="">Page</label>
+        <input type="text" name="l" id="">
+        <br>
+        <label for="">Page 2</label>
+        <input type="text" name="m" id="">
+        <br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+
+
+</body>
+</html>
